@@ -8,7 +8,7 @@ axios.interceptors.response.use(
   }
 );
  
-const apiUrl = "http://localhost:5078"; 
+const apiUrl = process.env.REACT_APP_API_URL; 
 
 axios.defaults.baseURL = apiUrl;
 axios.defaults.headers['Content-Type'] = 'application/json';
