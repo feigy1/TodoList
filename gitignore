@@ -1,0 +1,19 @@
+# .NET Build Folders
+AuthServer/bin/
+AuthServer/obj/
+
+# User-specific files
+AuthServer/.vs/
+AuthServer/.vscode/
+AuthServer/.idea/
+AuthServer/*.user
+AuthServer/*.suo
+AuthClient/.vscode/
+AuthClient/.vs/
+AuthClient/node_modules/
+
+# OS generated files
+AuthServer/Thumbs.db
+AuthServer/Desktop.ini
+
+
