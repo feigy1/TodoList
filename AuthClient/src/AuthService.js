@@ -8,6 +8,7 @@ setAuthorizationBearer();
 
 function saveAccessToken(authResult) {
   localStorage.setItem("access_token", authResult.token);
+  console.log('process.env.API_URL', process.env.REACT_APP_API_URL)
   setAuthorizationBearer();
 }
 
