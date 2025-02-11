@@ -48,7 +48,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             entity.HasKey(e => e.id).HasName("PRIMARY");
 
-            entity.ToTable("users");
+            entity.ToTable("Users");
 
             entity.HasIndex(e => e.password, "password").IsUnique();
 
@@ -63,7 +63,7 @@ modelBuilder.Entity<Session>(entity =>
     {
         entity.HasKey(e => e.Number).HasName("PRIMARY");
 
-        entity.ToTable("sessions");
+        entity.ToTable("Sessions");
 
         entity.HasIndex(e => e.UserId, "user_id");
 
