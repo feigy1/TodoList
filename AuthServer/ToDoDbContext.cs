@@ -16,13 +16,13 @@ public partial class ToDoDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Item> Items { get; set; }
-    public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<Items> Items { get; set; }
+    public virtual DbSet<Users> Users { get; set; }
     public virtual DbSet<Session> Sessions { get; set; }
 
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     => optionsBuilder.UseMySql(
-        "server=localhost;user=feigy;password=PHHDH;database=tasks", 
+        "server=bc8ooc32y4vwockv2xmw-mysql.services.clever-cloud.com;user=uf2ezku5kqwyw0mn;password=QRaZTDFqyCOad4JxiS7J;database=bc8ooc32y4vwockv2xmw", 
         Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.0-mysql"));
 
 
@@ -32,11 +32,11 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             .UseCollation("utf8mb4_0900_ai_ci")
             .HasCharSet("utf8mb4");
 
-        modelBuilder.Entity<Item>(entity =>
+        modelBuilder.Entity<Items>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
 
-            entity.ToTable("items");
+            entity.ToTable("Items");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Name)
@@ -44,7 +44,7 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
                 .HasColumnName("Name");
         });
 
-        modelBuilder.Entity<User>(entity =>
+        modelBuilder.Entity<Users>(entity =>
         {
             entity.HasKey(e => e.id).HasName("PRIMARY");
 

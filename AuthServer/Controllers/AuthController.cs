@@ -55,7 +55,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         {
             var name = loginModel.Name;
             var lastId = _dataContext.Users?.Max(u => u.id) ?? 0;
-            var newUser = new User {username = name, password = loginModel.Password};
+            var newUser = new Users {username = name, password = loginModel.Password};
             _dataContext.Users?.Add(newUser);
             await _dataContext.SaveChangesAsync();
             var jwt = CreateJWT(newUser);
@@ -63,7 +63,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
             return Ok(jwt);
         }
 
-        private object CreateJWT(User user)
+        private object CreateJWT(Users user)
         {
             var claims = new List<Claim>()
                 {
@@ -88,7 +88,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         // {
         //     _dataContext.Sessions?.Add(new Session { UserId = user.id,Date=DateTime.Now});
         // }
-        private async Task AddSession(User user)
+        private async Task AddSession(Users user)
         {
             var session = new Session { UserId = user.id,Date=DateTime.Now};
             _dataContext.Sessions?.Add(session);

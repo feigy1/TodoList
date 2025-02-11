@@ -86,10 +86,10 @@ builder.Services.AddDbContext<ToDoDbContext>(options =>
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+//builder.Services.AddControllers();//
 var app = builder.Build();
 app.UseHttpsRedirection();
-app.UseCors();
+app.UseCors();//devCorsePolicy
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
 {
@@ -116,7 +116,7 @@ app.MapGet("/tasks", async (ToDoDbContext dbContext) =>
     return Results.Ok(tasks);
 });
 
-app.MapPost("/tasks", async (Item item, ToDoDbContext dbContext) =>
+app.MapPost("/tasks", async (Items item, ToDoDbContext dbContext) =>
 {
     dbContext.Items.Add(item);
     await dbContext.SaveChangesAsync();
@@ -159,5 +159,5 @@ app.MapControllers();
 app.Run(); 
 public class IsCompleteRequest
 {
-    public bool IsComplete { get; set; }
+        public bool IsComplete { get; set; }
 }

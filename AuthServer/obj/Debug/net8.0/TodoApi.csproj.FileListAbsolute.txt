@@ -557,3 +557,6 @@ C:\Users\user1\Desktop\API\AuthServer\obj\Debug\net8.0\refint\TodoApi.dll
 C:\Users\user1\Desktop\API\AuthServer\obj\Debug\net8.0\TodoApi.pdb
 C:\Users\user1\Desktop\API\AuthServer\obj\Debug\net8.0\TodoApi.genruntimeconfig.cache
 C:\Users\user1\Desktop\API\AuthServer\obj\Debug\net8.0\ref\TodoApi.dll
+C:\Users\user1\Desktop\API\AuthServer\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user1\Desktop\API\AuthServer\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\user1\Desktop\API\AuthServer\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

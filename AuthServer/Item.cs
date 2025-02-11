@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TodoList;
 
-public partial class Item
+public partial class Items
 {
     public int Id { get; set; }
 
