@@ -20,7 +20,7 @@ export default function Home() {
           color="text.primary"
           gutterBottom
         >
-           דף הבית - אפליקציית הזדהות
+           ברוכים הבאים לדף הבית🏠
         </Typography>
         </Container>
         </Box>

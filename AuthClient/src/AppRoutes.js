@@ -4,6 +4,7 @@ import Private from "./components/Private";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from './components/Register';
+import Tasks from './components/tasks';
 
 const AppRoutes = [
     {
@@ -25,6 +26,10 @@ const AppRoutes = [
     {
         path: '/register',
         element: <Register />
+    },
+    {
+        path: '/tasks',
+        element: <Tasks />
     }
 ];
 

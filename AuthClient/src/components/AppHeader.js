@@ -19,6 +19,7 @@ import { useLocation } from 'react-router'
 const pages = [
   { title: "ציבורי", route: "/public" },
   { title: "פרטי", route: "/private" },
+  { title: "משימות", route: "/tasks" }
 ];
 
 function AppHeader() {
