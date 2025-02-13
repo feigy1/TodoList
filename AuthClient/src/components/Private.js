@@ -74,7 +74,7 @@ export default function Private() {
         >
           מידע על התחברויות המשתמש
         </Typography> 
-        {/* {<Sessions />} */}
+        {<Sessions />}
 
         {localStorage.getItem("access_token") && (
           <section className="todoapp">
@@ -89,7 +89,7 @@ export default function Private() {
                 />
               </form>
             </header>
-            {/* <section className="main" style={{ display: "block" }}>
+            <section className="main" style={{ display: "block" }}>
               <ul className="todo-list">
                 {todos.map((todo) => {
                   return (
@@ -116,7 +116,7 @@ export default function Private() {
                   );
                 })}
               </ul>
-            </section> */}
+            </section>
           </section>
         )}
       </Container>
