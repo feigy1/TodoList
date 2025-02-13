@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TodoList;
+namespace API;
 
 public partial class Session
 {

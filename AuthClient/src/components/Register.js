@@ -21,6 +21,7 @@ export default function Register() {
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
+    console.log('name, password',name, password);
     event.preventDefault();
     await Service.register(name, password);
     navigate("/Private", { replace: true });

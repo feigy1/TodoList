@@ -7,7 +7,7 @@ using System.Security.Claims;
 using System.Text;
 using System.IO;
 using System.Text.Json;
-using TodoList; 
+using API; 
 
 namespace AuthServer.Controllers
 {
@@ -17,26 +17,15 @@ namespace AuthServer.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly ToDoDbContext _dataContext;
+        private readonly ILogger<PrivateController> _logger;
 
-        public AuthController(IConfiguration configuration, ToDoDbContext dataContext)
+        public AuthController(IConfiguration configuration, ToDoDbContext dataContext,ILogger<PrivateController> logger)
         {
             _configuration = configuration;
             _dataContext = dataContext;
+            _logger = logger;
         }
 
-
-        // [HttpPost("/api/login")]
-        // public IActionResult Login([FromBody] LoginModel loginModel)
-        // {
-        //     var user = _dataContext.Users?.FirstOrDefault(u => u.username == loginModel.Name && u.password == loginModel.Password);
-        //     if (user is not null)
-        //     {
-        //         var jwt = CreateJWT(user);
-        //         AddSession(user);
-        //         return Ok(jwt);
-        //     }
-        //     return Unauthorized();
-        // }
         [HttpPost("/api/login")]
 public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
 {
@@ -53,6 +42,7 @@ public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
         [HttpPost("/api/register")]
         public async Task<IActionResult> Register([FromBody] LoginModel loginModel)
         {
+            _logger.LogInformation("רגיסטר ");
             var name = loginModel.Name;
             var lastId = _dataContext.Users?.Max(u => u.id) ?? 0;
             var newUser = new Users {username = name, password = loginModel.Password};
@@ -84,10 +74,6 @@ public async Task<IActionResult> Login([FromBody] LoginModel loginModel)
             return new { Token = tokenString };
         }
 
-        // private void AddSession(User user)
-        // {
-        //     _dataContext.Sessions?.Add(new Session { UserId = user.id,Date=DateTime.Now});
-        // }
         private async Task AddSession(Users user)
         {
             var session = new Session { UserId = user.id,Date=DateTime.Now};

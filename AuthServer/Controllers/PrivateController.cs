@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
-using TodoList;
+using API;
 // using ToDoDbContext.ToDoDbContext;
 using Microsoft.Extensions.Logging;
 
@@ -24,11 +24,6 @@ namespace AuthServer.Controllers
              _logger = logger;
         }
 
-        // [HttpGet]
-        // public ActionResult<IEnumerable<Session>> Get()
-        // {//s.UserId
-        //     return Ok(_dataContext.Sessions?.Where(s => s.UserId == Identity.Id).OrderByDescending(s=>s.Date));
-        // }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Session>>> Get()
         {    _logger.LogInformation("Entering Get method");
