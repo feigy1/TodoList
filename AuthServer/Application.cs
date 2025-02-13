@@ -13,7 +13,7 @@
         public string? Technology { get; set; }
     
         public Application(){
-            Name="TasksServer";
+            Name="ToDoList📃";
             Author="Feigy Shmaya";
             GitHubUrl="https://github.com/feigy1";
             Version="0.0.1";
