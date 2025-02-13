@@ -30,7 +30,7 @@ export default function Sessions() {
           </TableRow>
         </TableHead>
         <TableBody>
-        {sessions && sessions.length > 0 ? (
+        {/* {sessions && sessions.length > 0 ? (
             sessions.map((row) => (
               <TableRow
                 key={row.number}
@@ -50,7 +50,7 @@ export default function Sessions() {
                 אין התחברויות קודמות
               </TableCell>
             </TableRow>
-          )}
+          )} */}
         </TableBody>
       </Table>
     </TableContainer>
