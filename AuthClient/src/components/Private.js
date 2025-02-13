@@ -74,7 +74,7 @@ export default function Private() {
         >
           מידע על התחברויות המשתמש
         </Typography> 
-        {<Sessions />}
+        {/* {<Sessions />} */}
 
         {localStorage.getItem("access_token") && (
           <section className="todoapp">
