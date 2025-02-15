@@ -103,7 +103,7 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
     // app.UseSwaggerUI();
     app.UseSwaggerUI(options =>
     {
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");//https://authserver-344d.onrender.com/index.html
         options.RoutePrefix = string.Empty; 
     });
 // }
@@ -149,7 +149,9 @@ app.MapDelete("/tasks/{id}", async (int id, ToDoDbContext dbContext) =>
     await dbContext.SaveChangesAsync();
     return Results.NoContent(); 
 });
-
+var basePath = "/"; // או כל PathBase שאתה רוצה
+app.UsePathBase(basePath);
+app.UseRouting();
 app.UseAuthentication();
 
 app.UseAuthorization();
