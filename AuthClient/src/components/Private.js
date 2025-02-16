@@ -76,7 +76,7 @@ export default function Private() {
         </Typography> 
         {<Sessions />}
 
-        {localStorage.getItem("access_token") && (
+        {/* {localStorage.getItem("access_token") && (
           <section className="todoapp">
             <header className="header">
               <h1>todos</h1><br></br>
@@ -118,7 +118,7 @@ export default function Private() {
               </ul>
             </section>
           </section>
-        )}
+        )} */}
       </Container>
     </Box>
   );
