@@ -73,8 +73,8 @@ import { jwtDecode } from 'jwt-decode';
  // ודא שהייבוא תואם לגרסה שבה אתה משתמש
 
 // הגדרת כתובת הבסיס של Axios
-axios.defaults.baseURL = process.env.REACT_APP_API_URL;
-console.log('process.env.REACT_APP_API_URL:', process.env.REACT_APP_API_URL);
+axios.defaults.baseURL = 'https://authserver-344d.onrender.com/';
+console.log('process.env.REACT_APP_API_URL:', 'https://authserver-344d.onrender.com/');
 
 setAuthorizationBearer();
 
