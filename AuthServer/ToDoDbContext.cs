@@ -65,19 +65,19 @@ modelBuilder.Entity<Session>(entity =>
 
         entity.ToTable("Sessions");
 
-        entity.HasIndex(e => e.UserId, "user_id");
+        entity.HasIndex(e => e.User_id, "user_id");
 
         entity.Property(e => e.Date)
              .HasDefaultValueSql("CURRENT_TIMESTAMP")
              .HasColumnType("timestamp")
              .HasColumnName("date");
 
-        entity.Property(e => e.UserId)
+        entity.Property(e => e.User_id)
         .HasColumnName("user_id");
 
         entity.HasOne(d => d.User)
         .WithMany()
-        .HasForeignKey(d => d.UserId)
+        .HasForeignKey(d => d.User_id)
         .OnDelete(DeleteBehavior.ClientSetNull)
         .HasConstraintName("sessions_ibfk_1");     
     });
