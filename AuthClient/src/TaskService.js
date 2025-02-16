@@ -8,7 +8,7 @@ axios.interceptors.response.use(
   }
 );
  
-const apiUrl = process.env.REACT_APP_API_URL; 
+const apiUrl = 'https://authserver-344d.onrender.com/api/'; 
 
 axios.defaults.baseURL = apiUrl;
 axios.defaults.headers['Content-Type'] = 'application/json';
