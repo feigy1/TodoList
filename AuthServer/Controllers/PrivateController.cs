@@ -28,9 +28,9 @@ namespace AuthServer.Controllers
         public async Task<ActionResult<IEnumerable<Session>>> Get()
         {    _logger.LogInformation("Entering Get method");
             // ודא שה-Identity כבר אוחסן ב-AuthenticatedController על ידי הפילטר
-            var userId = Identity?.Id;  // השתמש ב-Id של המשתמש מתוך Identity
-              _logger.LogWarning("No sessions found for User ID: {UserId}", userId);
-            if (!userId.HasValue)
+            var User_id = Identity?.Id;  // השתמש ב-Id של המשתמש מתוך Identity
+              _logger.LogWarning("No sessions found for User ID: {User_id}", User_id);
+            if (!User_id.HasValue)
             {
                 _logger.LogWarning("User ID not found. Returning Unauthorized.");
                 
@@ -39,7 +39,7 @@ namespace AuthServer.Controllers
 
             // שליפת הסשנים המתאימים למשתמש המחובר
             var sessions = await _dataContext.Sessions
-                .Where(s => s.UserId == userId.Value)  // שליפת הסשנים לפי UserId
+                .Where(s => s.User_id == User_id.Value)  // שליפת הסשנים לפי User_id
                 .OrderByDescending(s => s.Date)  // מיון הסשנים לפי תאריך
                 .ToListAsync();  // ביצוע השאילתה
 

@@ -138,7 +138,7 @@ private object CreateJWT(Users user)
 
         private async Task AddSession(Users user)
         {
-            var session = new Session { UserId = user.id,Date=DateTime.Now};
+            var session = new Session { User_id = user.id,Date=DateTime.Now};
             _dataContext.Sessions?.Add(session);
             await _dataContext.SaveChangesAsync();
 
