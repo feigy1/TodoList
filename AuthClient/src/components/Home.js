@@ -20,7 +20,7 @@ export default function Home() {
           color="text.primary"
           gutterBottom
         >
-           ברוכים הבאים לדף הבית🏠
+           🏠ברוכים הבאים לדף הבית
         </Typography>
         </Container>
         </Box>
