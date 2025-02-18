@@ -32,9 +32,9 @@ export default function Public() {
           color="text.secondary"
           paragraph
         >
-          את המידע בדף הזה יכולים לראות כל המבקרים באתר.
+          
           <br />
-          אין צורך להתחבר כדי לצפות בדף זה.
+          
         </Typography>
         <Typography
           component="h5"

@@ -63,7 +63,7 @@ export default function Private() {
           color="text.secondary"
           paragraph
         >
-          את המידע בדף הזה יכולים לראות רק משתמשים מחוברים.
+          
         </Typography>
         <Typography
           component="h5"
@@ -75,50 +75,6 @@ export default function Private() {
           מידע על התחברויות המשתמש
         </Typography> 
         {<Sessions />}
-
-        {/* {localStorage.getItem("access_token") && (
-          <section className="todoapp">
-            <header className="header">
-              <h1>todos</h1><br></br>
-              <form onSubmit={createTodo}>
-                <input
-                  className="new-todo"
-                  placeholder="Well, let's take on the day"
-                  value={newTodo}
-                  onChange={(e) => setNewTodo(e.target.value)}
-                />
-              </form>
-            </header>
-            <section className="main" style={{ display: "block" }}>
-              <ul className="todo-list">
-                {todos.map((todo) => {
-                  return (
-                    <li
-                      className={todo.isComplete ? "completed" : ""}
-                      key={todo.id}
-                    >
-                      <div className="view">
-                        <input
-                          className="toggle"
-                          type="checkbox"
-                          defaultChecked={todo.isComplete}
-                          onChange={(e) =>
-                            updateCompleted(todo, e.target.checked)
-                          }
-                        />
-                        <label>{todo.name}</label>
-                        <button
-                          className="destroy"
-                          onClick={() => deleteTodo(todo.id)}
-                        ></button>
-                      </div>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
-          </section>
-        )} */}
       </Container>
     </Box>
   );

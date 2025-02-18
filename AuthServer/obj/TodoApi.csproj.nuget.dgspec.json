@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj": {}
+    "c:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj": {
+    "c:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj",
+        "projectUniqueName": "c:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "C:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj",
+        "projectPath": "c:\\Users\\user1\\Desktop\\API\\AuthServer\\TodoApi.csproj",
         "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user1\\Desktop\\API\\AuthServer\\obj\\",
+        "outputPath": "c:\\Users\\user1\\Desktop\\API\\AuthServer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user1\\AppData\\Roaming\\NuGet\\NuGet.Config",
